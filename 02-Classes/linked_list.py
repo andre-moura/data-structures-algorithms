@@ -34,51 +34,7 @@ class LinkedList:
         
 
             
-    def pop(self):
-        if self.length == 0:
-            return
-
-        pre = temp = self.head
-        while temp.next != None:
-            pre = temp
-            temp = temp.next
-
-        self.tail = pre
-        pre.next = None
-        self.length -= 1
-        if self.length == 0:
-            self.head = self.tail = None
-        return temp
-        
-    def pop_first(self):
-        if self.length == 0:
-            return None
-
-        temp = self.head
-        self.head = self.head.next
-        temp.next = None
-        self.length -= 1
-        if self.length == 0:
-            self.tail = None
-        return temp
-
-    def get(self, index):
-        if index < 0 or index >= self.length:
-            return None
-
-        temp = self.head
-        for _ in range(index):
-            temp = temp.next
-        return temp.value
-
-
-    def set_value(self, index, value):
-        temp = self.get(index)
-        if temp:
-            temp.value = value
-            return True
-        return False
-
+    
 
     def print_list(self):
         temp = self.head
