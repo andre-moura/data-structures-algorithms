@@ -34,7 +34,24 @@ class LinkedList:
         
 
             
+    def pop(self):
+        if self.length == 0:
+            return
+
+        pre = temp = self.head
+        while temp.next != None:
+            pre = temp
+            temp = temp.next
+
+        self.tail = pre
+        pre.next = None
+        self.length -= 1
+        if self.length == 0:
+            self.head = self.tail = None
+        return temp
+        
     
+
 
     def print_list(self):
         temp = self.head
