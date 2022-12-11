@@ -72,7 +72,12 @@ class LinkedList:
         return temp.value
 
 
-    
+    def set_value(self, index, value):
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        return False
 
 
     def print_list(self):
