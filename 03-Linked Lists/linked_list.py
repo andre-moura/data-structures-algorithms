@@ -68,7 +68,7 @@ class LinkedList:
         temp = self.head
         for _ in range(index):
             temp = temp.next
-        return temp.value
+        return temp
 
 
     def set_value(self, index, value):
