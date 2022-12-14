@@ -88,6 +88,7 @@ class TestClass(unittest.TestCase):
         self.assertEqual(linked_list.get(1).value, 3, 'Should be equal 3')
         self.assertEqual(linked_list.get(2).value, 2, 'Should be equal 2')
         self.assertEqual(linked_list.get(3).value, 1, 'Should be equal 1')
+        
 
 
 if __name__ == '__main__':
