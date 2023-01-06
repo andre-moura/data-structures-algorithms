@@ -30,3 +30,27 @@ class BinarySearchTree:
                     return True
                 temp = temp.right
 
+
+    def contains(self, value):
+        if self.root is None:
+            return False
+        
+        temp = self.root
+        while temp is not None:
+            if value < temp.value:
+                temp = temp.left
+            elif value > temp.value:
+                temp = temp.right
+            else:
+                return True
+        return False
+
+    def min(self, value):
+        if self.root is None:
+            return None
+        
+        current = self.root
+        while current.left is not None:
+            current = current.left
+        return current
+                
